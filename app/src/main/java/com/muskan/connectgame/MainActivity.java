@@ -113,10 +113,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void checkWinner() {
         for (int[] winner : winningPositions) {
-            Log.d("muskan","for loop running");
             if (gameState[winner[0]] == gameState[winner[1]] && gameState[winner[1]] == gameState[winner[2]] && gameState[winner[1]] != 2) {
                 Log.d("muskan","if condition satisfied");
-                if(winner[0] == 1) message = "Yellow Wins!!";
+                Log.d("muskan","winner"+gameState[winner[0]]);
+                if(gameState[winner[0]] == 1) message = "Yellow Wins!!";
                 else message = "Red Wins!!";
                 gameIsActive = false;
                 Toast.makeText(this, message, Toast.LENGTH_LONG).show();
